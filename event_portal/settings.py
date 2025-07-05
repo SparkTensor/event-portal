@@ -20,8 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # To load the file
-from dotenv import load_dotenv
-load_dotenv()
+# Load .env only if running locally (i.e., DEBUG is True)
+if os.getenv("RENDER") != "true":
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
