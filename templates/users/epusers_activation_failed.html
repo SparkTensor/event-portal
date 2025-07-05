@@ -1,0 +1,27 @@
+{% extends 'users/auth_base.html' %}
+
+{% block title %} Activation failed {% endblock %}
+
+{% block main %}
+<div class="container d-flex justify-content-center align-items-center h-100">
+    <div class="col-md-6 col-lg-5">
+      <div class="ep-card text-center">
+        <div class="brand-logo mb-3">Event Portal</div>
+        
+        <!-- Using the new error styles and a different icon -->
+        <div class="icon-circle-error">
+          <i class="bi bi-x-circle-fill"></i>
+        </div>
+
+        <!-- Updated text for the error message -->
+        <h4 class="mb-3">Activation Failed</h4>
+        <p class="text-muted">This activation link is invalid, has already been used, or has expired.</p>
+        
+        <!-- Updated button to lead back to the signup page -->
+        <div class="d-grid mt-4">
+          <a href="{% url 'epusers_signup' %}" class="btn btn-primary">Try to Sign Up Again</a>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
