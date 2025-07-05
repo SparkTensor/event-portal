@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda request: redirect('epusers_login')),
     path('', include('apps.users.urls')),
 ]
 
