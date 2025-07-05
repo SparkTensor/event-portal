@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('signup/', views.epusers_signup, name='epusers_signup'),
+    path('', views.epusers_signup, name='epusers_signup'),
     path('login/', views.epusers_login, name='epusers_login'),
     path('signup/email_verification/', views.epusers_verification_email_sent, name='epusers_verification_email_sent'),
     # Url to send the activation email
